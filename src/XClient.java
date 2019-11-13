@@ -93,7 +93,7 @@ public class XClient extends Application {
     }
     private void sendMoveReceiveMove(ActionEvent ae) throws IOException {
         Button t = (Button)ae.getSource();
-        //t.setText("X");
+        t.setText("X");
         int row = gridPane.getRowIndex(t);
         int col = gridPane.getColumnIndex(t);
 

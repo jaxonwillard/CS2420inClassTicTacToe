@@ -64,7 +64,7 @@ public class OClient extends Application {
         primaryStage.show(); // Display the stage
 
         connect();
-        //receiveFirstMove();
+        receiveFirstMove();
     }
 
     private void receiveFirstMove() throws Exception {
@@ -77,7 +77,7 @@ public class OClient extends Application {
 
     private void connect() throws Exception {
         try {
-            socketClient = new Socket("144.39.220.110",5558);
+            socketClient = new Socket("localhost",5559);
             System.out.println("Server: " + "Connection Established");
         } catch (Exception ex) {
             System.err.println(ex + "Client couldn't connect");
@@ -91,7 +91,7 @@ public class OClient extends Application {
     }
     private void sendMoveReceiveMove(ActionEvent ae) throws IOException {
         Button t = (Button)ae.getSource();
-        //t.setText("O");
+        t.setText("O");
 
         int row = gridPane.getRowIndex(t);
         int col = gridPane.getColumnIndex(t);
